@@ -1,5 +1,7 @@
 # Python
 
+Unless noted otherwise, these scripts run in Python 2.7.
+
 ## sgfmovedump.py
 
 To run,
