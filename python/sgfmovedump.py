@@ -84,7 +84,7 @@ def main(argv):
     try:
         show_sgf_file(pathname, move_number)
     except Exception, e:
-        print >>sys.stderr, "show_sgf:", str(e)
+        print >>sys.stderr, "sgfmovedump:", str(e)
         sys.exit(1)
 
 if __name__ == "__main__":
