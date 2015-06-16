@@ -41,17 +41,20 @@ def show_sgf_file(pathname, move_number):
 	print "Handicap stones are"
 	handicap_stones = root_node.get('AB')
 	for row, col in handicap_stones:
-	    print human_point(col, row)
+	    print human_point(col, row),
 	current_move_number += 1
+	print
 	print "Moves"
-	print "1: B --"
+	print "1:".rjust(4), "B ----",
     for colour, move in plays:
+	if (current_move_number % 2) == 0:
+	    print
 	current_move_number += 1
         if move is None:
-	    print str(current_move_number) + ":", colour.upper(), "Pass"
+	    print str(current_move_number).rjust(3) + ":", colour.upper(), "Pass",
             continue
         row, col = move
-        print str(current_move_number) + ":", colour.upper(), human_point(col, row)
+        print str(current_move_number).rjust(3) + ":", colour.upper(), human_point(col, row).ljust(4),
         try:
             board.play(row, col, colour)
         except ValueError:
