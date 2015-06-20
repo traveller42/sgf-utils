@@ -3,3 +3,6 @@ Collection of utilities in various languages that use [Smart Game Format](http:/
 
 ## [Python](python/)
 * sgfmovedump.py - displays the moves contained in an SGF file
+
+## [Shell](shell/)
+* rename-ogs.sh - renames files downloaded by [uberdownloader](https://github.com/thouis/uberdownloader)
