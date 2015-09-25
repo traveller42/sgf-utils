@@ -66,7 +66,7 @@ def show_sgf_file(pathname, move_number):
         human_point(col, row).ljust(4),
     print
 
-DESCRIPTION = """\
+_description = """\
 Show the moves from an SGF file. If a move number is specified, the moves will be
 shown up to that move number.
 """
@@ -74,7 +74,7 @@ shown up to that move number.
 def main(argv):
     """Process the command line arguments and dispatch show_sgf_file()"""
     parser = OptionParser(usage="%prog <filename> [move number]",
-                          description=DESCRIPTION)
+                          description=_description)
     _, args = parser.parse_args(argv)
     if not args:
         parser.error("not enough arguments")
